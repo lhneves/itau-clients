@@ -1,0 +1,504 @@
+{
+  "clientes": [
+    {
+      "codigo_cliente": "0000001",
+      "nome": "AAAAA AAAAA",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000002",
+      "nome": "BBBBB BBBBB",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000003",
+      "nome": "CCCCC CCCCC",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000004",
+      "nome": "DDDDD DDDDD",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000005",
+      "nome": "EEEEE EEEEE",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000006",
+      "nome": "FFFFF FFFFF",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000007",
+      "nome": "GGGGG GGGGG",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000008",
+      "nome": "HHHHH HHHHH",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000009",
+      "nome": "IIIII IIIII",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000010",
+      "nome": "JJJJJ JJJJJ",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000011",
+      "nome": "KKKKK KKKKK",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000012",
+      "nome": "LLLLL LLLLL",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000013",
+      "nome": "MMMMM MMMMM",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000014",
+      "nome": "NNNNN NNNNN",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000015",
+      "nome": "OOOOO OOOOO",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000016",
+      "nome": "PPPPP PPPPP",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000017",
+      "nome": "QQQQQ QQQQQ",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000018",
+      "nome": "RRRRR RRRRR",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000019",
+      "nome": "SSSSS SSSSS",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000020",
+      "nome": "TTTTT TTTTT",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000021",
+      "nome": "UUUUU UUUUU",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000022",
+      "nome": "VVVVV VVVVV",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000023",
+      "nome": "WWWWW WWWWW",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000024",
+      "nome": "XXXXX XXXXX",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000025",
+      "nome": "YYYYY YYYYY",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000026",
+      "nome": "ZZZZZ ZZZZZ",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000027",
+      "nome": "AAAAA BBBBB",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000028",
+      "nome": "CCCCC DDDDD",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000029",
+      "nome": "EEEEE FFFFF",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000030",
+      "nome": "GGGGG HHHHH",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000031",
+      "nome": "IIIII JJJJJ",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000032",
+      "nome": "KKKKK LLLLL",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000033",
+      "nome": "MMMMM NNNNN",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000034",
+      "nome": "OOOOO PPPPP",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000035",
+      "nome": "QQQQQ RRRRR",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000036",
+      "nome": "SSSSS TTTTT",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000037",
+      "nome": "UUUUU VVVVV",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000038",
+      "nome": "WWWWW XXXXX",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000039",
+      "nome": "YYYYY ZZZZZ",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000040",
+      "nome": "AAAAA CCCCC",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000041",
+      "nome": "DDDDD EEEEE",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000042",
+      "nome": "FFFFF GGGGG",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000043",
+      "nome": "HHHHH IIIII",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000044",
+      "nome": "JJJJJ KKKKK",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000045",
+      "nome": "LLLLL MMMMM",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000046",
+      "nome": "NNNNN OOOOO",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000047",
+      "nome": "PPPPP QQQQQ",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000048",
+      "nome": "RRRRR SSSSS",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000049",
+      "nome": "TTTTT UUUUU",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000050",
+      "nome": "VVVVV WWWWW",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000051",
+      "nome": "XXXXX YYYYY",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000052",
+      "nome": "ZZZZZ AAAAA",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000053",
+      "nome": "BBBBB CCCCC",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000054",
+      "nome": "DDDDD FFFFF",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000055",
+      "nome": "GGGGG HHHHH",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000056",
+      "nome": "IIIII JJJJJ",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000057",
+      "nome": "KKKKK LLLLL",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000058",
+      "nome": "MMMMM NNNNN",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000059",
+      "nome": "OOOOO PPPPP",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000060",
+      "nome": "QQQQQ RRRRR",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000061",
+      "nome": "SSSSS TTTTT",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000062",
+      "nome": "UUUUU VVVVV",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000063",
+      "nome": "WWWWW XXXXX",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000064",
+      "nome": "YYYYY ZZZZZ",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000065",
+      "nome": "AAAAA BBBBB",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000066",
+      "nome": "CCCCC DDDDD",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000067",
+      "nome": "EEEEE FFFFF",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000068",
+      "nome": "GGGGG HHHHH",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000069",
+      "nome": "IIIII JJJJJ",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000070",
+      "nome": "KKKKK LLLLL",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000071",
+      "nome": "MMMMM NNNNN",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000072",
+      "nome": "OOOOO PPPPP",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000073",
+      "nome": "QQQQQ RRRRR",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000074",
+      "nome": "SSSSS TTTTT",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000075",
+      "nome": "UUUUU VVVVV",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000076",
+      "nome": "WWWWW XXXXX",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000077",
+      "nome": "YYYYY ZZZZZ",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000078",
+      "nome": "AAAAA CCCCC",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000079",
+      "nome": "DDDDD EEEEE",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000080",
+      "nome": "FFFFF GGGGG",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000081",
+      "nome": "HHHHH IIIII",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000082",
+      "nome": "JJJJJ KKKKK",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000083",
+      "nome": "LLLLL MMMMM",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000084",
+      "nome": "NNNNN OOOOO",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000085",
+      "nome": "PPPPP QQQQQ",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000086",
+      "nome": "RRRRR SSSSS",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000087",
+      "nome": "TTTTT UUUUU",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000088",
+      "nome": "VVVVV WWWWW",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000089",
+      "nome": "XXXXX YYYYY",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000090",
+      "nome": "ZZZZZ AAAAA",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000091",
+      "nome": "BBBBB CCCCC",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000092",
+      "nome": "DDDDD FFFFF",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000093",
+      "nome": "GGGGG HHHHH",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000094",
+      "nome": "IIIII JJJJJ",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000095",
+      "nome": "KKKKK LLLLL",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000096",
+      "nome": "MMMMM NNNNN",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000097",
+      "nome": "OOOOO PPPPP",
+      "risco": "alto"
+    },
+    {
+      "codigo_cliente": "0000098",
+      "nome": "QQQQQ RRRRR",
+      "risco": "médio"
+    },
+    {
+      "codigo_cliente": "0000099",
+      "nome": "SSSSS TTTTT",
+      "risco": "baixo"
+    },
+    {
+      "codigo_cliente": "0000100",
+      "nome": "UUUUU VVVVV",
+      "risco": "alto"
+    }
+  ]
+}
