@@ -10,11 +10,11 @@ import { ClientSearchComponent } from '../../components/client-search/client-sea
 
 @Component({
   standalone: true,
-  selector: 'app-product-page',
+  selector: 'app-clients-page',
   imports: [CommonModule, ClientCardComponent, ClientSearchComponent],
   templateUrl: './clients.component.html',
 })
-export class ProductPageComponent {
+export class ClientsPageComponent {
   clients: IClient[] = [];
   errorMessage: string | null = null;
 
