@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<p class="text-xl mt-10 font-bold capitalize" *ngIf="!!errorMessage">{{errorMessage}}</p>
+
+<div class="relative flex flex-col justify-center bg-cover bg-no-repeat bg-center min-h-80"
+  [style]="{backgroundImage: 'url(../../../../../assets/header-bg-img.png)'}">
+  <div class="flex flex-col justify-center items-start relative z-10 min-h-72 w-full max-w-7xl mx-auto px-5 gap-4">
+    <h1 class="text-5xl font-bold text-white">{{clientInfo?.nome}}</h1>
+    <p class="text-white text-xl">Código: #{{clientInfo?.codigo_cliente}}</p>
+    <p class="text-white text-base border border-primary rounded-full px-3 py-1 -ml-1 capitalize">Risco
+      {{clientInfo?.risco}}</p>
+  </div>
+</div>

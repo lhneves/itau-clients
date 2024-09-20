@@ -10,16 +10,16 @@ export const routes: Routes = [
         path: '',
         loadComponent: () =>
           import('./features/clients/page/clients/clients.component').then(
-            (m) => m.ProductPageComponent
+            (m) => m.ClientsPageComponent
           ),
       },
     ],
   },
-  // {
-  //   path: 'client/:code',
-  //   loadComponent: () =>
-  //     import(
-  //       './features/products/page/product-edit/product-edit.component'
-  //     ).then((m) => m.ProductEditComponent),
-  // },
+  {
+    path: 'client/:code',
+    loadComponent: () =>
+      import('./features/clients/page/client/client.component').then(
+        (m) => m.ClientPageComponent
+      ),
+  },
 ];
