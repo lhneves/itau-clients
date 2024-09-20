@@ -13,7 +13,17 @@ export class ClientService {
   constructor(private readonly http: HttpClient) {}
 
   getAll(filters: Partial<IClient> = {}) {
-    const params = new HttpParams({ fromObject: filters });
+    let params = new HttpParams();
+
+    const { codigo_cliente, risco } = filters;
+
+    if (codigo_cliente) {
+      params = params.set('codigo_cliente_like', codigo_cliente);
+    }
+
+    if (risco && risco !== 'todos') {
+      params = params.set('risco', risco);
+    }
 
     return this.http
       .get<IClient[]>(`${this.apiUrl}/clients`, { params })
