@@ -1,8 +1,13 @@
-<section class="px-4 my-10 max-w-7xl ">
+<section class="px-4 mb-10 max-w-7xl ">
+  <!-- <app-product-search (searchEvent)="handleSearch($event)"></app-product-search> -->
   <div class="flex flex-col gap-4">
     <div class="flex items-center justify-between">
       <h2 class="text-3xl font-bold">Clientes</h2>
+      <!-- <app-product-register-form (createEvent)="refetchProducts()" /> -->
     </div>
     <p>Abaixo há uma lista de clientes classificados por código, nome e nível de risco.</p>
+  </div>
+  <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-10">
+    <app-client-card *ngFor="let client of clients" [clientInfo]="client"></app-client-card>
   </div>
 </section>

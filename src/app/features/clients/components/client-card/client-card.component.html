@@ -1,0 +1,20 @@
+<div class="relative flex flex-col px-6 py-4 gap-6 w-full max-w-[400px] bg-gray-900 rounded-md">
+  <div class="client-card flex flex-col gap-3 text-white">
+    <p class="underline underline-offset-4 decoration-primary" data-testid="category-data">{{clientInfo.risco}}</p>
+    <p data-testid="code-data">Código: #{{clientInfo.codigo_cliente}}</p>
+    <strong class="text-2xl w-11/12 mt-3" data-testid="product-name-data">{{clientInfo.nome}}</strong>
+  </div>
+  <div class="flex items-center justify-between text-white">
+
+    <p-button severity="danger" [text]="true" data-testid="btn-delete">
+      <p class="text-sm">
+        deletar
+      </p>
+      <ng-icon name="ionTrashSharp" size="1rem" class="ml-2"></ng-icon>
+    </p-button>
+    <a [routerLink]="['/client', clientInfo.codigo_cliente]" class="p-button p-button-outlined" data-testid="btn-edit">
+      <p class="text-sm">editar</p>
+      <ng-icon name="ionArrowRedoSharp" size="0.65rem" class="ml-2"></ng-icon>
+    </a>
+  </div>
+</div>
