@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
 
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 
 import { heroUserCircle } from '@ng-icons/heroicons/outline';
+import { ionArrowRedoSharp, ionTrashSharp } from '@ng-icons/ionicons';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HttpClientModule, NgIconComponent],
+  imports: [RouterOutlet, NgIconComponent],
   templateUrl: './app.component.html',
   viewProviders: [
     provideIcons({
       heroUserCircle,
+      ionTrashSharp,
+      ionArrowRedoSharp,
     }),
   ],
 })

@@ -1,0 +1,18 @@
+.client-card::before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 0.6rem;
+  top: 1.3rem;
+  left: 0;
+  background-color: #f25722;
+}
+
+:host ::ng-deep .p-button {
+  padding: 0.25rem 0.375rem;
+}
+
+:host ::ng-deep .p-button-label {
+  font-size: 12px;
+  font-weight: normal;
+}
