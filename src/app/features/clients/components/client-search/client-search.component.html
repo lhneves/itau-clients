@@ -1,0 +1,13 @@
+<section class="flex flex-col sm:flex-row items-center justify-end my-10 gap-4">
+  <div class="search-code relative flex items-center w-full sm:w-auto">
+    <p-inputNumber class="w-full sm:w-48" placeholder="código do cliente" inputId="integeronly" [(ngModel)]="clientCode"
+      [style]="{'width':'100%'}" locale="pt-BR" />
+  </div>
+
+  <div class="flex gap-4 w-full sm:w-auto">
+    <p-dropdown class="w-full sm:w-48" [options]="riskOptions" [(ngModel)]="risk" optionLabel="label"
+      optionValue="value" placeholder="selecione o risco" [style]="{'width':'100%'}" />
+
+    <p-button severity="primary" label="Buscar" (click)="submitSearch()"></p-button>
+  </div>
+</section>

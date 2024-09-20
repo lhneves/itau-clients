@@ -1,0 +1,19 @@
+@media (min-width: 640px){
+  .search-code::before {
+    content: "";
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    right: calc(100% + 25px);
+    background-color: #F25722;
+  }
+}
+
+:host ::ng-deep .p-button {
+  padding: 0.5rem 1rem;
+}
+
+:host ::ng-deep .p-button-label {
+  font-size: 16px;
+  font-weight: normal;
+}

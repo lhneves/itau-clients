@@ -6,11 +6,12 @@ import { IClient } from '../../models/clients.model';
 import { ClientService } from '../../service/client.service';
 
 import { ClientCardComponent } from '../../components/client-card/client-card.component';
+import { ClientSearchComponent } from '../../components/client-search/client-search.component';
 
 @Component({
   standalone: true,
   selector: 'app-product-page',
-  imports: [CommonModule, ClientCardComponent],
+  imports: [CommonModule, ClientCardComponent, ClientSearchComponent],
   templateUrl: './clients.component.html',
 })
 export class ProductPageComponent {
@@ -23,8 +24,8 @@ export class ProductPageComponent {
     this.fetchClients();
   }
 
-  fetchClients() {
-    this.clientService.getAll().subscribe(
+  fetchClients(filters?: Partial<IClient>) {
+    this.clientService.getAll(filters).subscribe(
       (data) => {
         this.clients = data;
       },
@@ -34,5 +35,9 @@ export class ProductPageComponent {
           'Não foi possível carregar os clientes. Tente novamente';
       }
     );
+  }
+
+  handleSearch(filters: Partial<IClient>) {
+    this.fetchClients(filters);
   }
 }
