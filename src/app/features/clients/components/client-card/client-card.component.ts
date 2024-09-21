@@ -4,11 +4,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
 import { NgIconComponent } from '@ng-icons/core';
 
+import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from 'primeng/button';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 import { ClientService } from '../../service/client.service';
-import { ConfirmationService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 import { IClient } from '../../models/clients.model';
 
@@ -22,8 +23,9 @@ import { IClient } from '../../models/clients.model';
     RouterLink,
     ButtonModule,
     ConfirmDialogModule,
+    ToastModule,
   ],
-  providers: [ConfirmationService],
+  providers: [ConfirmationService, MessageService],
   templateUrl: './client-card.component.html',
   styleUrl: './client-card.component.scss',
 })
@@ -32,6 +34,7 @@ export class ClientCardComponent {
   @Output() deleteEvent = new EventEmitter();
 
   clientService = inject(ClientService);
+  messageService = inject(MessageService);
   confirmationService = inject(ConfirmationService);
 
   confirmDelete(event: Event) {
@@ -52,10 +55,17 @@ export class ClientCardComponent {
   }
 
   handleDeleteProduct(clientCode: string) {
-    this.clientService.delete(clientCode).subscribe((response) => {
-      if (response.error) return;
-
-      this.deleteEvent.emit();
+    this.clientService.delete(clientCode).subscribe({
+      next: () => {
+        this.deleteEvent.emit();
+      },
+      error: () => {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Erro',
+          detail: 'Não foi possível deletar o cliente. Tente novamente.',
+        });
+      },
     });
   }
 }
