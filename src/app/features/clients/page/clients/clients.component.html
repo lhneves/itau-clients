@@ -1,3 +1,5 @@
+<p-toast></p-toast>
+
 <section class="px-4 mb-10 max-w-7xl ">
   <app-client-search (searchEvent)="handleSearch($event)"></app-client-search>
   <div class="flex flex-col gap-4">
@@ -7,6 +9,7 @@
     <p>Abaixo há uma lista de clientes classificados por código, nome e nível de risco.</p>
   </div>
   <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-10">
-    <app-client-card *ngFor="let client of clients" [clientInfo]="client"></app-client-card>
+    <app-client-card *ngFor="let client of clients" [clientInfo]="client"
+      (deleteEvent)="onClientDelete()"></app-client-card>
   </div>
 </section>
