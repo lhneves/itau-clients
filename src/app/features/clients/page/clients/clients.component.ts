@@ -34,16 +34,15 @@ export class ClientsPageComponent {
   }
 
   fetchClients(filters?: Partial<IClient>) {
-    this.clientService.getAll(filters).subscribe(
-      (data) => {
+    this.clientService.getAll(filters).subscribe({
+      next: (data) => {
         this.clients = data;
       },
-      (error) => {
-        console.error('Error fetching clients:', error);
+      error: () => {
         this.errorMessage =
-          'Não foi possível carregar os clientes. Tente novamente';
-      }
-    );
+          'Não foi possível carregar os clientes. Tente novamente.';
+      },
+    });
   }
 
   handleSearch(filters: Partial<IClient>) {

@@ -8,6 +8,7 @@
     </div>
     <p>Abaixo há uma lista de clientes classificados por código, nome e nível de risco.</p>
   </div>
+  <p class="text-base text-red-500 font-bold capitalize my-10" *ngIf="!!errorMessage">{{errorMessage}}</p>
   <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-10">
     <app-client-card *ngFor="let client of clients" [clientInfo]="client"
       (deleteEvent)="onClientDelete()"></app-client-card>
