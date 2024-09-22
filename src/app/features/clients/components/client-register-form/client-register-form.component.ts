@@ -51,12 +51,12 @@ export class ClientRegisterFormComponent {
 
   riskOptions = [
     { label: 'baixo', value: 'baixo' },
-    { label: 'medio', value: 'médio' },
+    { label: 'médio', value: 'médio' },
     { label: 'alto', value: 'alto' },
   ];
 
   registerForm = new FormGroup({
-    codigo_cliente: new FormControl(null, {
+    codigo_cliente: new FormControl<string | null>(null, {
       nonNullable: true,
       validators: [Validators.required],
     }),
@@ -71,7 +71,6 @@ export class ClientRegisterFormComponent {
   });
 
   onCreate() {
-    console.log('chamou on create');
     this.registerForm.markAllAsTouched();
     if (this.registerForm.invalid) return;
 

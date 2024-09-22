@@ -27,7 +27,7 @@ import { IClient } from '../../models/clients.model';
   ],
   providers: [ConfirmationService, MessageService],
   templateUrl: './client-card.component.html',
-  styleUrl: './client-card.component.scss',
+  styleUrl: './client-card.component.css',
 })
 export class ClientCardComponent {
   @Input() clientInfo!: IClient;
@@ -60,6 +60,7 @@ export class ClientCardComponent {
         this.deleteEvent.emit();
       },
       error: () => {
+        console.log('error aqui');
         this.messageService.add({
           severity: 'error',
           summary: 'Erro',
