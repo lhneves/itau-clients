@@ -37,13 +37,15 @@ export class ClientPageComponent implements OnInit {
 
   fetchClient(clientCode: string) {
     this.clientService.getAll({ codigo_cliente: clientCode }).subscribe({
-      next: (data) => {
-        if (data.length === 0) {
+      next: (response) => {
+        if (!response.body) return;
+
+        if (response.body.length === 0) {
           this.errorMessage = 'Cliente não encontrado.';
           return;
         }
 
-        this.clientInfo = data[0];
+        this.clientInfo = response.body[0];
       },
       error: () => {
         this.errorMessage = 'Não foi possível carregar o cliente.';

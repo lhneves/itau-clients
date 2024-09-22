@@ -7,6 +7,8 @@ import { MessageService } from 'primeng/api';
 import { ClientService } from '../../service/client.service';
 
 import { ToastModule } from 'primeng/toast';
+import { PaginatorModule, PaginatorState } from 'primeng/paginator';
+
 import { ClientCardComponent } from '../../components/client-card/client-card.component';
 import { ClientSearchComponent } from '../../components/client-search/client-search.component';
 import { ClientRegisterFormComponent } from '../../components/client-register-form/client-register-form.component';
@@ -20,6 +22,7 @@ import { ClientRegisterFormComponent } from '../../components/client-register-fo
     ClientCardComponent,
     ClientSearchComponent,
     ClientRegisterFormComponent,
+    PaginatorModule,
   ],
   templateUrl: './clients.component.html',
   providers: [MessageService],
@@ -27,6 +30,11 @@ import { ClientRegisterFormComponent } from '../../components/client-register-fo
 export class ClientsPageComponent {
   clients: IClient[] = [];
   errorMessage: string | null = null;
+
+  first: number = 0;
+  rows: number = 9;
+  page: number = 1;
+  totalRecords!: number;
 
   clientService = inject(ClientService);
   messageService = inject(MessageService);
@@ -36,15 +44,19 @@ export class ClientsPageComponent {
   }
 
   fetchClients(filters?: Partial<IClient>) {
-    this.clientService.getAll(filters).subscribe({
-      next: (data) => {
-        this.clients = data;
-      },
-      error: () => {
-        this.errorMessage =
-          'Não foi possível carregar os clientes. Tente novamente.';
-      },
-    });
+    this.clientService
+      .getAll(filters, { page: this.page, limit: 9 })
+      .subscribe({
+        next: (response) => {
+          this.clients = response.body || [];
+          this.totalRecords =
+            Number(response.headers.get('x-total-count')) || 0;
+        },
+        error: () => {
+          this.errorMessage =
+            'Não foi possível carregar os clientes. Tente novamente.';
+        },
+      });
   }
 
   handleSearch(filters: Partial<IClient>) {
@@ -58,6 +70,17 @@ export class ClientsPageComponent {
       detail: 'Cliente deletado com sucesso!',
     });
 
+    this.fetchClients();
+  }
+
+  onPageChange(event: PaginatorState) {
+    const { first, rows, page } = event;
+
+    if (first === undefined || rows === undefined || page === undefined) return;
+
+    this.first = first;
+    this.rows = rows;
+    this.page = page + 1;
     this.fetchClients();
   }
 }
