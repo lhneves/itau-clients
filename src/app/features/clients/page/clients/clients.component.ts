@@ -9,6 +9,7 @@ import { ClientService } from '../../service/client.service';
 import { ToastModule } from 'primeng/toast';
 import { ClientCardComponent } from '../../components/client-card/client-card.component';
 import { ClientSearchComponent } from '../../components/client-search/client-search.component';
+import { ClientRegisterFormComponent } from '../../components/client-register-form/client-register-form.component';
 
 @Component({
   standalone: true,
@@ -18,6 +19,7 @@ import { ClientSearchComponent } from '../../components/client-search/client-sea
     ToastModule,
     ClientCardComponent,
     ClientSearchComponent,
+    ClientRegisterFormComponent,
   ],
   templateUrl: './clients.component.html',
   providers: [MessageService],

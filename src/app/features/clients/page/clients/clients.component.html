@@ -5,6 +5,7 @@
   <div class="flex flex-col gap-4">
     <div class="flex items-center justify-between">
       <h2 class="text-3xl font-bold">Clientes</h2>
+      <app-client-register-form (createEvent)="fetchClients()"></app-client-register-form>
     </div>
     <p>Abaixo há uma lista de clientes classificados por código, nome e nível de risco.</p>
   </div>

@@ -4,7 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 
 import { heroUserCircle } from '@ng-icons/heroicons/outline';
-import { ionArrowRedoSharp, ionTrashSharp } from '@ng-icons/ionicons';
+import {
+  ionAddCircleOutline,
+  ionArrowRedoSharp,
+  ionTrashSharp,
+} from '@ng-icons/ionicons';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +20,7 @@ import { ionArrowRedoSharp, ionTrashSharp } from '@ng-icons/ionicons';
       heroUserCircle,
       ionTrashSharp,
       ionArrowRedoSharp,
+      ionAddCircleOutline,
     }),
   ],
 })
