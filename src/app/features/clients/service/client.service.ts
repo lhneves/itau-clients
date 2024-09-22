@@ -27,11 +27,20 @@ export class ClientService {
     }
 
     return this.http
-      .get<IClient[]>(`${this.apiUrl}/clients?_page=1&_limit=9`, { params })
+      .get<IClient[]>(`${this.apiUrl}/clients`, { params })
       .pipe(shareReplay(1));
   }
 
   delete(clientCode: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/clients/${clientCode}`);
+  }
+
+  create(newClient: IClient): Observable<IClient> {
+    const formattedClient = {
+      ...newClient,
+      codigo_cliente: newClient.codigo_cliente.toString().padStart(7, '0'),
+    };
+
+    return this.http.post<IClient>(`${this.apiUrl}/clients`, formattedClient);
   }
 }
