@@ -1,0 +1,48 @@
+<p-toast></p-toast>
+
+<p-button [text]="true" class="flex items-center cursor-pointer" (onClick)="visible = true">
+  <strong class="text-base font-semibold mr-2"> Novo Cliente</strong>
+  <ng-icon name="ionAddCircleOutline" size="1.5rem"></ng-icon>
+</p-button>
+
+<p-dialog header="Crie um novo cliente" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+  <form [formGroup]="registerForm" (submit)="onCreate()" class="flex flex-col gap-4">
+    <div class="flex flex-col gap-2 w-full">
+      <label for="codigo_cliente">Código</label>
+      <p-inputNumber class="w-full" placeholder="código do cliente" aria-describedby="codigo-do-cliente"
+        inputId="integeronly" formControlName="codigo_cliente" locale="pt-BR" />
+      <small class="text-base text-red-500" id="code-help"
+        *ngIf="registerForm.controls['codigo_cliente'] && (registerForm.controls['codigo_cliente'].dirty || registerForm.controls['codigo_cliente'].touched)">
+        <p *ngIf="registerForm.controls['codigo_cliente'].errors?.['required']">Este campo é obrigatório</p>
+      </small>
+    </div>
+
+    <div class="flex flex-col gap-2 w-full">
+      <label for="risco">Risco</label>
+      <p-dropdown class="w-full z-50" id="risco" [options]="riskOptions" formControlName="risco" optionLabel="label"
+        optionValue="value" placeholder="nível de risco" [style]="{'width':'100%'}" />
+      <small class="text-base text-red-500" id="risco-help"
+        *ngIf="registerForm.controls['risco'].invalid && (registerForm.controls['risco'].dirty || registerForm.controls['risco'].touched)">
+        <p *ngIf="registerForm.controls['risco'].errors?.['required']">Este campo é obrigatório</p>
+      </small>
+    </div>
+
+    <div class="flex flex-col gap-2 w-full">
+      <label for="nome">Nome</label>
+      <input pInputText id="nome" aria-describedby="nome-do-cliente" formControlName="nome"
+        placeholder="nome do cliente" />
+      <small class="text-base text-red-500" id="nome-help"
+        *ngIf="registerForm.controls['nome'].invalid && (registerForm.controls['nome'].dirty || registerForm.controls['nome'].touched)">
+        <p *ngIf="registerForm.controls['nome'].errors?.['required']">Este campo é obrigatório</p>
+        <p *ngIf="registerForm.controls['nome'].errors?.['minlength']">Este campo requer mínimo de 4 dígitos.</p>
+      </small>
+    </div>
+
+    <span class="text-red-500" *ngIf="!!errorMessage">{{errorMessage}}</span>
+
+    <div class="flex justify-end gap-5">
+      <p-button label="Cancelar" severity="secondary" (click)="visible = false" />
+      <p-button label="Salvar" type="submit" />
+    </div>
+  </form>
+</p-dialog>
