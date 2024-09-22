@@ -14,4 +14,7 @@
     <app-client-card *ngFor="let client of clients" [clientInfo]="client"
       (deleteEvent)="onClientDelete()"></app-client-card>
   </div>
+  <p-paginator class="flex items-center justify-center mt-10" (onPageChange)="onPageChange($event)" [first]="first"
+    [rows]="rows" [totalRecords]="totalRecords" [showCurrentPageReport]="true"
+    currentPageReportTemplate="{first} ao {last} de {totalRecords} clientes" />
 </section>

@@ -1,6 +1,6 @@
 import { shareReplay } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 
 import { IClient } from '../models/clients.model';
 import { Observable } from 'rxjs';
@@ -13,7 +13,10 @@ export class ClientService {
 
   constructor(private readonly http: HttpClient) {}
 
-  getAll(filters: Partial<IClient> = {}): Observable<IClient[]> {
+  getAll(
+    filters: Partial<IClient> = {},
+    pagination?: { page: number; limit: number }
+  ): Observable<HttpResponse<IClient[]>> {
     let params = new HttpParams();
 
     const { codigo_cliente, risco } = filters;
@@ -26,8 +29,13 @@ export class ClientService {
       params = params.set('risco', risco);
     }
 
+    if (pagination) {
+      params = params.set('_page', pagination.page);
+      params = params.set('_limit', pagination.limit);
+    }
+
     return this.http
-      .get<IClient[]>(`${this.apiUrl}/clients`, { params })
+      .get<IClient[]>(`${this.apiUrl}/clients`, { params, observe: 'response' })
       .pipe(shareReplay(1));
   }
 
