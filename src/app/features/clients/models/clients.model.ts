@@ -1,5 +1,5 @@
 export interface IClient {
-  codigo_cliente: number;
+  codigo_cliente: string;
   nome: string;
   risco: string;
 }

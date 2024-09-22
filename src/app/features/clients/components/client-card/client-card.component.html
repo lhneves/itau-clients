@@ -1,3 +1,13 @@
+<p-toast></p-toast>
+
+<p-confirmDialog>
+  <ng-template pTemplate="message" let-message>
+    <div>
+      <p>{{ message.message }}</p>
+    </div>
+  </ng-template>
+</p-confirmDialog>
+
 <div class="relative flex flex-col px-6 py-4 gap-6 w-full max-w-[400px] bg-gray-900 rounded-md">
   <div class="client-card flex flex-col gap-3 text-white">
     <p class="underline underline-offset-4 decoration-primary" data-testid="category-data">{{clientInfo.risco}}</p>
@@ -6,7 +16,7 @@
   </div>
   <div class="flex items-center justify-between text-white">
 
-    <p-button severity="danger" [text]="true" data-testid="btn-delete">
+    <p-button severity="danger" [text]="true" (onClick)="confirmDelete($event)" data-testid="btn-delete">
       <p class="text-sm">
         deletar
       </p>

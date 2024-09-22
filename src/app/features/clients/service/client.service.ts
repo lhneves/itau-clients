@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { IClient } from '../models/clients.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class ClientService {
 
   constructor(private readonly http: HttpClient) {}
 
-  getAll(filters: Partial<IClient> = {}) {
+  getAll(filters: Partial<IClient> = {}): Observable<IClient[]> {
     let params = new HttpParams();
 
     const { codigo_cliente, risco } = filters;
@@ -26,7 +27,11 @@ export class ClientService {
     }
 
     return this.http
-      .get<IClient[]>(`${this.apiUrl}/clients`, { params })
+      .get<IClient[]>(`${this.apiUrl}/clients?_page=1&_limit=9`, { params })
       .pipe(shareReplay(1));
+  }
+
+  delete(clientCode: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/clients/${clientCode}`);
   }
 }

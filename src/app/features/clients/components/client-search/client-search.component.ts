@@ -15,7 +15,7 @@ import { IClient } from '../../models/clients.model';
   styleUrl: './client-search.component.css',
 })
 export class ClientSearchComponent {
-  clientCode!: number;
+  clientCode!: string;
   risk: string = '';
 
   @Output() searchEvent = new EventEmitter<Partial<IClient>>();

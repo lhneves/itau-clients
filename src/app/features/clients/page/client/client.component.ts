@@ -26,25 +26,28 @@ export class ClientPageComponent implements OnInit {
 
     if (clientCode === null) {
       this.errorMessage =
-        'Não foi possível adquirir o código do produto. Tente novamente.';
+        'Não foi possível adquirir o código do cliente. Tente novamente.';
       return;
     }
 
-    this.fetchClient(Number(clientCode));
+    this.fetchClient(clientCode);
 
     this.clientService.getAll();
   }
 
-  fetchClient(clientCode: number) {
-    this.clientService.getAll({ codigo_cliente: clientCode }).subscribe(
-      (data) => {
+  fetchClient(clientCode: string) {
+    this.clientService.getAll({ codigo_cliente: clientCode }).subscribe({
+      next: (data) => {
+        if (data.length === 0) {
+          this.errorMessage = 'Cliente não encontrado.';
+          return;
+        }
+
         this.clientInfo = data[0];
       },
-      (error) => {
-        console.error('Error fetching products:', error);
-        this.errorMessage =
-          'Não foi possível carregar o produto. Tente novamente.';
-      }
-    );
+      error: () => {
+        this.errorMessage = 'Não foi possível carregar o cliente.';
+      },
+    });
   }
 }
