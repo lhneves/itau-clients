@@ -1,4 +1,4 @@
-# IamClients
+# Itaú Clients
 
 A interface do projeto Itaú Clientes foi inspirada em páginas e tipografias das páginas do itaú na web.
 
