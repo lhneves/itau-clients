@@ -36,6 +36,8 @@ export class ClientsPageComponent {
   page: number = 1;
   totalRecords!: number;
 
+  clientFilter: Partial<IClient> = {};
+
   clientService = inject(ClientService);
   messageService = inject(MessageService);
 
@@ -43,9 +45,9 @@ export class ClientsPageComponent {
     this.fetchClients();
   }
 
-  fetchClients(filters?: Partial<IClient>) {
+  fetchClients() {
     this.clientService
-      .getAll(filters, { page: this.page, limit: 9 })
+      .getAll(this.clientFilter, { page: this.page, limit: 9 })
       .subscribe({
         next: (response) => {
           this.clients = response.body || [];
@@ -60,7 +62,8 @@ export class ClientsPageComponent {
   }
 
   handleSearch(filters: Partial<IClient>) {
-    this.fetchClients(filters);
+    this.clientFilter = filters;
+    this.fetchClients();
   }
 
   onClientDelete() {
