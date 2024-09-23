@@ -1,27 +1,68 @@
-# ItauClients
+# IamClients
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+A interface do projeto Itaú Clientes foi inspirada em páginas e tipografias das páginas do itaú na web.
 
-## Development server
+## Como rodar o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Faça o download em formato zip deste projeto ou rode o comando:
 
-## Code scaffolding
+```zsh
+git clone https://github.com/lhneves/itau-clients.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Após ter o projeto baixado, existem duas maneiras para executa-lo:
 
-## Build
+### 1. Docker
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Caso você possua docker na sua máquina, abra o `Docker Desktop`, ou dê start no docker engine pelo terminal.
 
-## Running unit tests
+Abra um terminal no diretório raíz do projeto iam-store e rode:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```zsh
+docker-compose up --build
+```
 
-## Running end-to-end tests
+Esse comando irá buildar duas imagens do docker e subir ambas as imagens, uma para simular o backend com `json-server` e outra para iniciar o frontend, que se encontrará no endereço [http://localhost:4200/](http://localhost:4200/).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 2. Node
 
-## Further help
+Caso não tenha Docker instalado, mas tenha `Node` e `npm`:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Abra um terminal no diretório raíz do projeto e rode:
+
+```zsh
+npm run server
+```
+
+Em _**OUTRO**_ terminal, no mesmo diretório, e rode:
+
+```zsh
+ng serve
+```
+
+A aplicação se encontrará no endereço [http://localhost:4200/](http://localhost:4200/).
+
+## Resumo
+
+Backend
+
+- `json-server` com db.json com lista de clientes
+- `Dockerfile` para o backend
+
+Frontend
+
+- Responsividade
+- Requests http para json-server, cobrindo todas operações CRUD
+- Validação de formulário
+- Validação de criação de clientes com código já existente
+- Testes para todos os casos de uso de `ClientCardComponent`
+- UI Library - Prime NG
+- `Dockerfile` para o frontend
+
+Docker
+
+- `docker-compose` para lidar com dois containers ao mesmo tempo
+
+## Pontos de melhoria
+
+- Testes: o coverage de testes é baixo, por uma limitação de conhecimento técnico. Porém, o componente `ClientCardComponent` possui testes que cobrem todos os casos de uso, podendo ser replicado a outros componentes.
