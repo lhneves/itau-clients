@@ -62,7 +62,3 @@ Frontend
 Docker
 
 - `docker-compose` para lidar com dois containers ao mesmo tempo
-
-## Pontos de melhoria
-
-- Testes: o coverage de testes é baixo, por uma limitação de conhecimento técnico. Porém, o componente `ClientCardComponent` possui testes que cobrem todos os casos de uso, podendo ser replicado a outros componentes.
