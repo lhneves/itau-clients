@@ -16,7 +16,7 @@ Após ter o projeto baixado, existem duas maneiras para executa-lo:
 
 Caso você possua docker na sua máquina, abra o `Docker Desktop`, ou dê start no docker engine pelo terminal.
 
-Abra um terminal no diretório raíz do projeto iam-store e rode:
+Abra um terminal no diretório raíz do projeto itau-clients e rode:
 
 ```zsh
 docker-compose up --build
